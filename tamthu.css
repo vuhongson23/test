@@ -129,31 +129,31 @@ p {
 }
 @media screen and (max-width: 767px){
     .image-1{
-        width: 96px;
+        width: 52px;
         height: auto;
-        top: -55px;
-        left: 44px;
-        transform: rotate(9deg);
+        top: -82px;
+        left: -2px;
+        transform: rotate(12deg);
     }
     .image-2{
-        width: 112px;
+        width: 63px;
         height: auto;
-        top: -50px;
-        right: 41px;
+        top: -62px;
+        right: 8px;
         transform: rotate(-11deg);
     }
     .image-3{
-        width: 111px;
+        width: 60px;
         height: auto;
-        bottom: -51px;
-        left: 28px;
+        bottom: -69px;
+        left: 8px;
         transform: rotate(-9deg);
     }
     .image-4{
-        width: 90px;
+        width: 55px;
         height: auto;
         bottom: -59px;
-        right: 53px;
+        right: 11px;
         transform: rotate(9deg);
     }
     body {
