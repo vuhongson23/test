@@ -129,10 +129,10 @@ p {
 }
 @media screen and (max-width: 767px){
     .image-1{
-        width: 30px;
+        width: 57px;
         height: auto;
         top: -82px;
-        left: 40px;
+        left: 11px;
         transform: rotate(12deg);
     }
     .image-2{
