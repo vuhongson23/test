@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tặng Bún iu ❤️❤️❤️</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+</head>
+<body>
+    <div class="loading-screen">
+        <span>❤️</span>
+        <div class="loading-bar">
+            <div class="loading"></div>
+        </div>
+        <span>❤️</span>
+    </div>
+    <div class="wrapper glass">
+        <div class="container_content">
+            <h2>Cậu coá yêu tớ khum 🤭 ?</h2>
+            <div class="btn">
+                <button onclick="turn_on_1()" id="yes">Coá</button>
+                <button onclick="turn_on_2()" id="no">Méo</button>
+            </div>
+            
+        </div>
+        <div class="modal" id="modal">
+            <!-- Modal đồng ý -->
+            <div id="modal-container-yes" class="modal-container-yes">
+                <div class="modal-header">
+                    <img src="./image/meo-cam-thia.webp" alt="">
+                </div>
+                <div class="modal-body">
+                    <p>Hí hí! Tớ biết cậu yêu tớ nhất mà</p>
+                    <p>Tớ có vài lời muốn nói với cậu ở đây</p>
+                    <p>Mở nó ra và đừng cười tớ nhé! 🫣</p>
+                </div>
+                <div class="modal-footer">
+                    <a id="close-1" class="close" href="./tamthu.html"><i class="fa-regular fa-envelope"></i></a>
+                </div>
+            </div>
+            <!-- Modal từ chối -->
+            <div id="modal-container-no" class="modal-container-no">
+                <div class="modal-header">
+                    <img src="./image/meme-meo-khoc-7.jpg" alt="">
+                </div>
+                <div class="modal-body">
+                    <p id="content">Ơ, Cậu chọn nhầm rồi kìa ＞︿＜!</p>
+                </div>
+                <div class="modal-footer">
+                    <button id="close-2">
+                        <p >Cậu chọn lại đi nha 🥺</p>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const btn_yes = document.getElementById('yes');
+        const btn_no = document.getElementById('no');
+        const btn_close_1 = document.getElementById('close-1');
+        const btn_close_2 = document.getElementById('close-2');
+        const modal = document.getElementById('modal');
+        const modal_yes = document.getElementById('modal-container-yes');
+        const modal_no = document.getElementById('modal-container-no');
+        // Mở Audio 1
+        function turn_on_1(){
+            var audio = document.createElement("audio");
+            audio.setAttribute("src","./audio/tiengtraloidung.mp3");
+            audio.setAttribute("autoplay","true");
+            document.body.appendChild(audio);
+        }
+        // Mở Audio 2
+        function turn_on_2(){
+            var audio_2 = document.createElement("audio");
+            audio_2.setAttribute("src","./audio/tiengtraloisai.mp3");
+            audio_2.setAttribute("autoplay","true");
+            document.body.appendChild(audio_2);
+        }
+        // Mở Modal 1
+        btn_yes.addEventListener('click',()=>{
+            modal.classList.add('show')
+            modal_yes.classList.add('show');
+        })
+        btn_close_1.addEventListener('click',()=>{
+            modal.classList.remove('show')
+            modal_yes.classList.remove('show');
+        })
+        // MỞ Modal 2
+        btn_no.addEventListener('click',()=>{
+            modal.classList.add('show')
+            modal_no.classList.add('show');
+        })
+        btn_close_2.addEventListener('click',()=>{
+            modal.classList.remove('show')
+            modal_no.classList.remove('show');
+        })
+    </script>
+</body>
+</html>

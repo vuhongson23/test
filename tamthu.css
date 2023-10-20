@@ -1,0 +1,175 @@
+* {
+    font-family: "Comic Sans MS", serif;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: url(./image/love6.jpg);
+    background-size: 100%;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-position-y: -85px;
+}
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.glass {
+    background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0));
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
+}
+.letter {
+    padding: 12px;
+    width: 726px;
+    height: auto;
+    border-radius: 12px;
+    background: #fff;
+    position: relative;
+    line-height: 26px;
+    z-index: -1;
+    opacity: 0;
+    animation: show 0.25s linear forwards 1.5s;
+}
+.image-1{
+    position: absolute;
+    width: 175px;
+    height: auto;
+    top: -125px;
+    left: 215px;
+    transform: rotate(7deg);
+    border-radius: 10px;
+    box-shadow: 9px 2px 10px #0c070799;
+    opacity: 0;
+    animation: show 0.25s linear forwards 1.6s;
+
+}
+.image-2{
+    position: absolute;
+    width: 175px;
+    height: auto;
+    top: -115px;
+    right: 230px;
+    transform: rotate(-9deg);
+    border-radius: 10px;
+    box-shadow: 9px 2px 10px #0c070799;
+    opacity: 0;
+    animation: show 0.25s linear forwards 2s;
+
+}
+.image-3{
+    position: absolute;
+    width: 170px;
+    height: auto;
+    bottom: -115px;
+    left: 215px;
+    transform: rotate(-9deg);
+    border-radius: 10px;
+    box-shadow: 9px 2px 10px #0c070799;
+    opacity: 0;
+    animation: show 0.25s linear forwards 2.5s;
+
+}
+.image-4{
+    position: absolute;
+    width: 170px;
+    height: auto;
+    bottom: -115px;
+    right: 220px;
+    transform: rotate(9deg);
+    border-radius: 10px;
+    box-shadow: 9px 2px 10px #0c070799;
+    opacity: 0;
+    animation: show 0.25s linear forwards 3s;
+}
+@keyframes show {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.block-slide {
+    height: 100%;
+    background: rgba(255, 149, 0, 0.967);
+    position: absolute;
+    animation: slide 1.5s linear alternate;
+}
+@keyframes slide {
+    0% {
+        width: 0%;
+    }
+    50% {
+        width: 50%;
+    }
+    100% {
+        width: 100%;
+    }
+
+}
+p {
+    margin-bottom: 10px;
+}
+.end {
+    margin-bottom: 0;
+}
+@media screen and (max-width: 767px){
+    .image-1{
+        width: 96px;
+        height: auto;
+        top: -55px;
+        left: 44px;
+        transform: rotate(9deg);
+    }
+    .image-2{
+        width: 112px;
+        height: auto;
+        top: -50px;
+        right: 41px;
+        transform: rotate(-11deg);
+    }
+    .image-3{
+        width: 111px;
+        height: auto;
+        bottom: -51px;
+        left: 28px;
+        transform: rotate(-9deg);
+    }
+    .image-4{
+        width: 90px;
+        height: auto;
+        bottom: -59px;
+        right: 53px;
+        transform: rotate(9deg);
+    }
+    body {
+        background-size: cover;
+        background-position-x: -262px;
+        background-position-y: 0;
+        object-fit: cover;
+    }
+    .letter {
+        width: 296px;
+        line-height: 13px;
+    }
+    .letter p {
+        font-size: 7px;
+    }
+    p {
+        margin-bottom: 0;
+    }
+}
